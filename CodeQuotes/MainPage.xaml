@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeQuotes.MainPage">
+
+    <Grid BackgroundColor="Navy">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1">
+                <GradientStopCollection>
+                    <GradientStop x:Name="gdStop1" Offset="0.00" Color="#051937"/>
+                    <GradientStop x:Name="gdStop2" Offset="0.25" Color="#004d7a"/>
+                    <GradientStop x:Name="gdStop3" Offset="0.50" Color="#008793"/>
+                    <GradientStop x:Name="gdStop4" Offset="0.75" Color="#00bf72"/>
+                    <GradientStop x:Name="gdStop5" Offset="1.00" Color="#a8eb12"/>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Margin="25" RowDefinitions=".8*,.2*">
+            <Label
+                x:Name="quote"
+                FontSize="{OnPlatform iOS=30, Android=30, WinUI=50}"
+                FontFamily="MainFont"
+                HorizontalTextAlignment="Center"
+                Text="They don't make bugs like Bunny anymore. - Olav Mjelde"
+                TextColor="White"
+                VerticalOptions="Center"/>
+            <Button
+                Grid.Row="1"
+                BackgroundColor="Black"
+                TextColor="White"
+                Opacity=".4"
+                Text="Get New Quote"
+                x:Name="btnGenerateQuote"
+                Clicked="btnGenerateQuote_Clicked"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
